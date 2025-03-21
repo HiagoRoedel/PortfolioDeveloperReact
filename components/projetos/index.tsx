@@ -10,6 +10,7 @@ export default function Projects() {
               <h1 className="font-title text-3xl uppercase text-white">meus projetos</h1>
             </div>
 
+
             {/* Grid de Projetos */}
             <div className="grid grid-cols-1 gap-8">
               <HoverEffect
