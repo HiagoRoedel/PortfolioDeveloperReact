@@ -1,2 +1,24 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@keyframes spin-horizontal {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  .animate-spin-horizontal {
+    animation: spin-horizontal 5s linear infinite;
+  }
 
+  .font-poppins{
+    font-family: "Poppins";
+    font-weight: 400;
+  }
+
+  .font-title{
+    font-family: "Krona One";
+    font-weight: 400;
+  }
+  

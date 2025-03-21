@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function BannerHome() {
 
@@ -43,14 +44,29 @@ export function BannerHome() {
             />
             {/* Gradiente radial para efeito de desfoque nas bordas */}
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-            <div className="container flex-col px-6 md:px-12 flex justify-start items-start">
-                <h1 className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-6xl md:text-8xl lg:text-9xl font-bold text-transparent">
-                    Hiago<br />Roedel
-                </h1>
-                <span className="text-white text-5xl -mt-5 relative z-20">
-                    {displayedText}
-                    <span className="animate-blink">|</span>
-                </span>
+            <div className="container mx-auto flex flex-col justify-center items-center ">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8 mt-8 lg:mt-0">
+                    <div className="text-center items-center justify-center flex flex-col lg:justify-start lg:items-start ">
+                        <h1 className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-4 text-6xl md:text-8xl lg:text-9xl font-bold text-transparent">
+                            Hiago<br />Roedel
+                        </h1>
+                        <span className="text-white text-4xl md:text-5xl relative z-20">
+                            {displayedText}
+                            <span className="animate-blink">|</span>
+                        </span>
+                    </div>
+                    <div className="flex justify-end">
+                        <Image
+                            width={500}
+                            height={500}
+                            alt="Imagem girando"
+                            src="/3d-nft-icon-developer-male-illustration.png"
+                            className="animate-spin-horizontal"
+                        />
+                    </div>
+
+                </div>
             </div>
         </div>
     );
